@@ -4,7 +4,7 @@
  * @Email:  crschmit@gmail.com
  * @Filename: main.js
  * @Last modified by:   Christian Schmitt
- * @Last modified time: 2017-07-05T22:02:26-05:00
+ * @Last modified time: 2017-07-05T22:20:08-05:00
  */
 
 $(document).ready(function() {
@@ -37,14 +37,19 @@ $(document).ready(function() {
 
   // Multiply
   let multiply = 1.2
+  let multiplyCost = 10
   let multiplyView = $("#multiply-view")
 
   let showMultiply = () => multiplyView.text(formatNumber(multiply))
   showMultiply()
 
   let multiplyIncrement = m => {
-    increment *= m
-    showIncrement()
+    if(total >= multiplyCost) {
+      total -= multiplyCost
+      showTotal()
+      increment *= m
+      showIncrement()
+    }
   }
 
   let multiplyBtn = $("#multiply-btn")
@@ -53,15 +58,20 @@ $(document).ready(function() {
 
   // Auto Clickers
   let auto = 0
+  let autoCost = 100
   let autoView = $("#auto-view")
 
   let showAuto = () => autoView.text(auto)
   showAuto()
 
   let addAutoClicker = () => {
-    setInterval(() => incrementTotal(increment), 1000)
-    auto += 1
-    showAuto()
+    if (total >= autoCost) {
+      total -= autoCost
+      showTotal()
+      setInterval(() => incrementTotal(increment), 1000)
+      auto += 1
+      showAuto()
+    }
   }
 
   let autoBtn = $("#auto-btn")
