@@ -4,7 +4,7 @@
  * @Email:  crschmit@gmail.com
  * @Filename: styles.css
  * @Last modified by:   Christian Schmitt
- * @Last modified time: 2017-07-03T14:00:59-05:00
+ * @Last modified time: 2017-07-03T15:23:24-05:00
  */
 
 * {
@@ -42,7 +42,6 @@ div {
 .app .footer {
   background-color: #a3a375;
 }
-
 
 /* App Body */
 .app .body {
