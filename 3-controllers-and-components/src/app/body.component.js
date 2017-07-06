@@ -4,7 +4,7 @@
  * @Email:  crschmit@gmail.com
  * @Filename: body.component.js
  * @Last modified by:   Christian Schmitt
- * @Last modified time: 2017-07-06T13:18:12-05:00
+ * @Last modified time: 2017-07-06T13:58:33-05:00
  */
 
 import 'app/body.styles'
@@ -19,11 +19,11 @@ const controller =
     }
 
     get amount () {
-      return this.service.amount
+      return this.service.getIncrement()
     }
 
     get mult () {
-      return this.service.mult
+      return this.service.getMultiplier()
     }
 
     click () {
