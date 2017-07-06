@@ -1,5 +1,25 @@
 <button
-    class="ft-btn col-md-12"
+    class="ft-btn col-md-4"
     ng-click="body.click()">
-  <h2>+{{body.amount}}</h2>
+  <h2>+{{ body.amount | number:2 }}</h2>
+</button>
+<button
+    class="ft-btn col-md-4"
+    ng-click="body.multiply()">
+  <h2>*{{ body.mult | number:2 }}</h2>
+</button>
+<button
+    class="ft-btn col-md-4"
+    ng-click="body.autoClick()">
+  <h2>add auto clicker</h2>
+</button>
+<button
+    class="ft-btn col-md-4"
+    ng-click="body.save()">
+  <h2>save</h2>
+</button>
+<button
+    class="ft-btn col-md-4"
+    ng-click="body.load()">
+  <h2>load</h2>
 </button>
